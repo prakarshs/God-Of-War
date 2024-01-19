@@ -1,0 +1,143 @@
+*{
+    margin : 0;
+    padding : 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat';
+}
+
+html,body {
+    height: 100%;
+    width: 100%;
+}
+
+#nav{
+    height: 125px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 0 115px;
+    gap: 40px;
+    position:fixed;
+    z-index: 99;
+}
+
+#cursor {
+    height: 60px;
+    width: 60px;
+    position: fixed;
+    background-color: #96181895;
+    border-radius: 50%;
+    filter: blur(10px);
+    z-index: 9;
+}
+
+#nav img{
+    height: 60px;
+}
+
+h1,h2,h4,p{
+    color: aliceblue;
+}
+
+#nav h4{
+    text-transform: uppercase;
+}
+
+video{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    position: fixed;
+    top: 0;
+    z-index: -1;
+
+}
+
+#main{
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+#page1{
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    text-align: center;
+    z-index: 10;
+}
+
+#page1 h1{
+    font-size: 130px;
+    font-weight: 900;
+    position: relative;
+}
+
+/* #page1 h1::before{
+    content: "GHOST OF SPARTA";
+    position: absolute;
+    color: #0F0F0F;
+    top: -6px;
+    left: -6px;
+    -webkit-text-stroke: 1px #961918;
+    z-index: -1;
+} */
+
+#page2 {
+    height: 100vh;
+    width: 100%;
+    z-index: 10;
+}
+
+#scroller{
+    white-space: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+    position: relative;
+    z-index: 10;
+}
+
+#scroller::-webkit-scrollbar{
+    display: none;
+}
+
+.scroller-content{
+    white-space: nowrap;
+    display: inline-block;
+    animation-name: scroll;
+    animation-duration: 25s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+
+}
+
+.scroller-content h4{
+    display: inline-block;
+    font-size: 80px;
+    font-weight: 200;
+    margin-right: 20px;
+    transition: all linear 0.5s;
+    color: transparent;
+    text-transform: uppercase;
+    font-family:'Barlow Condensed';
+    -webkit-text-stroke: 2px #961918;
+}
+
+.scroller-content h4:hover{
+    color: #961918;
+}
+
+@keyframes scroll {
+    from{
+        transform: translateX(0);
+    }
+    to{
+        transform: translateX(-100%);
+    }
+    
+}
